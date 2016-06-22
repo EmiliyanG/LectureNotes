@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="customDarkest">#011C26</color>
+    <color name="customDarker">#2F5259</color>
+    <color name="customDark">#61848C</color>
+    <color name="customLight">#9FB9BF</color>
+    <color name="customLightest">#D0D5D9</color>
+    <color name="customWarning">#FF0000</color>
+    <color name="individualMenuBtnLight">#0b86b3</color>
+    <color name="individualMenuBtnDark">#064d68</color>
+    <color name="individualMenuBtnDarker">#043143</color>
+
+</resources>

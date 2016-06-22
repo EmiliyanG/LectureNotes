@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Uni-Notes</string>
+    <string name="title_modules">Modules</string>
+    <string name="no_modules_hint">No available modules to display</string>
+    <string name="no_notes_hint">No available notes to display for this module</string>
+
+    <string name="cancel">cancel</string>
+    <string name="add_module">add</string>
+    <string name="save">save</string>
+    <string name="add_note">add note</string>
+    <string name="warning_add_module_wrong_name">Module name should not start with empty space!</string>
+    <string name="warning_add_module_existing_name">Module name already exists!</string>
+    <string name="title_activity_draw">DrawActivity</string>
+    <string name="stringR">R</string>
+    <string name="stringG">G</string>
+    <string name="stringB">B</string>
+    <string name="sketch">Sketch it!</string>
+</resources>

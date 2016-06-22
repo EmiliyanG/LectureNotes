@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lecturenotes.emiliyan.lecturenotes.MainActivity"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:id="@+id/menuContainer"
+            android:background="@color/customDarkest"
+            android:weightSum="1"
+            android:padding="6dp"
+            android:gravity="right">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:weightSum="1">
+
+                <ImageButton
+                    android:layout_width="53dp"
+                    android:layout_height="44dp"
+                    android:id="@+id/backButton"
+                    android:background="@drawable/back_button"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/title_modules"
+                    android:id="@+id/title"
+                    android:layout_weight="0.96"
+                    android:gravity="bottom|center"
+                    android:textColor="@color/customLightest"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:id="@+id/searchIconBtn"
+                    android:background="@drawable/search_icon"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:layout_width="57dp"
+                    android:layout_height="44dp"
+                    android:id="@+id/addModuleBtn"
+                    android:background="@drawable/add_module_button"
+                    android:layout_marginLeft="6dp" />
+
+                <ImageButton
+                    android:layout_width="57dp"
+                    android:layout_height="44dp"
+                    android:id="@+id/addNoteBtn"
+                    android:background="@drawable/add_note_button"
+                    android:layout_marginLeft="6dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="6dp"
+                android:visibility="gone"
+                android:id="@+id/searchBarContainer">
+
+                <EditText
+                    android:layout_width="88dp"
+                    android:layout_height="51dp"
+                    android:hint="Search for modules"
+                    android:id="@+id/searchBar"
+                    android:background="@color/customLight"
+                    android:layout_weight="0.99"
+                    android:textColor="@color/customDarkest"
+                    android:textColorHint="@color/customDark"
+                    android:textSize="25sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/customLightest">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/modulesScrollView"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/modulesContainer">
+
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/notesScrollView"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/notesContainer"></LinearLayout>
+            </ScrollView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                android:id="@+id/extrasContainer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_modules_hint"
+                    android:id="@+id/noModulesNotesHint"
+                    android:layout_gravity="center"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:textColor="@color/customDark"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/addModuleLayout"
+                    android:gravity="top|center_vertical"
+                    android:background="@color/customLightest"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:hint="Type in module name"
+                        android:ems="10"
+                        android:id="@+id/addModuleEditText"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/customLight"
+                        android:textSize="25sp"
+                        android:padding="6dp"
+                        android:textColor="@color/customDarkest"
+                        android:textColorHint="@color/customDarker"
+                        android:layout_marginTop="30dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_module"
+                            android:id="@+id/addBtn"
+                            android:textSize="30sp"
+                            android:background="@color/customDarker"
+
+                            android:textColor="@color/customLightest" />
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cancel"
+                            android:id="@+id/cancelBtn"
+                            android:textSize="30sp"
+
+                            android:background="@color/customDarker"
+                            android:textColor="@color/customLightest"
+                            android:layout_marginLeft="6dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/warning_add_module_wrong_name"
+                        android:id="@+id/warningAddModule"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="@color/customWarning"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

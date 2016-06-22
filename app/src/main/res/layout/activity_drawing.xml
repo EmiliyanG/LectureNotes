@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lecturenotes.emiliyan.lecturenotes.DrawingActivity"
+    android:padding="0dp">
+
+    <com.lecturenotes.emiliyan.lecturenotes.DrawingView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/drawingView"
+        android:background="@color/customLight" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal|top"
+        android:background="@color/customDarkest"
+        android:weightSum="3"
+        android:id="@+id/topMenu">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:id="@+id/drawingCancel"
+            android:background="@color/customDarker"
+            android:layout_margin="6dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:layout_weight="1"
+            android:textColor="@color/customLightest" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/sketch"
+            android:id="@+id/drawingTitle"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:id="@+id/drawingSave"
+            android:background="@color/customDarker"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:textColor="@color/customLightest" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:gravity="bottom|center"
+        android:weightSum="1"
+        android:paddingBottom="6dp"
+        >
+
+        <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/colorPickerImageBtn"
+            android:foreground="@drawable/color_frame"
+
+            android:scaleType="centerInside"
+
+            android:background="@color/customDarkest" />
+
+        <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/pencil"
+
+            android:background="@drawable/pencil_selected"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="6dp" />
+
+        <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/eraser"
+            android:background="@drawable/eraser"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="6dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:background="@color/customDarkest"
+        android:id="@+id/colorPicker"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/customDarkest"
+            android:foreground="@drawable/color_picker_frame"
+            android:layout_margin="20dp"
+
+            android:id="@+id/color_window">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/stringR"
+                android:id="@+id/textView" />
+
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:id="@+id/colorSeekBarR"
+                android:max="255"
+                android:indeterminate="false"
+                android:splitTrack="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/stringG"
+                android:id="@+id/textView2" />
+
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:id="@+id/colorSeekBarG"
+                android:max="255" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/stringB"
+                android:id="@+id/textView3" />
+
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:id="@+id/colorSeekBarB"
+                android:max="255" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:id="@+id/colorPickerBtn"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp" />
+
+    </LinearLayout>
+</FrameLayout>
